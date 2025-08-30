@@ -188,7 +188,7 @@ student_id,name,department,level,course,credit,grade,semester
       </a>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/Precious07-Ade">
+      <a href="https://github.com/MAVIS-Creator">
         <img src="https://github.com/Precious07-Ade.png?size=120" width="120" height="120" style="border-radius:50%;" alt="Precious07 Avatar"/><br/>
         <sub><b>MAVIS-Creator</b></sub>
       </a>
