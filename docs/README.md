@@ -1,123 +1,157 @@
-GradeCalc – Student GPA Calculator & Transcript Generator (CLI)
-GradeCalc is a command-line application written in Python that calculates student GPAs, generates academic transcripts, audits graduation eligibility, and creates recommendation letters — all using CSV data and the standard library (plus rich for styled output).
+<h1 align="center">🎓 GradeCalc – Student GPA Calculator & Transcript Generator (CLI)</h1>
 
-🚀 Features
+<p align="center">
+  <b>GradeCalc</b> is a Python-based command-line application that helps manage academic records.<br>
+  It calculates student GPAs, generates transcripts, audits graduation eligibility, analyzes GPA trends, 
+  and creates recommendation letters — all from CSV data.
+</p>
 
-GPA Calculation using a 5.0 scale
+<p align="center">
+  <i>Lightweight, modular, and depends only on the Python Standard Library + 
+  <a href="https://github.com/Textualize/rich">rich</a> for styled CLI output.</i>
+</p>
 
-Semester-wise transcript generation
+<hr>
 
-Graduation eligibility audit (based on GPA and credits)
+<h2>✨ Features</h2>
+<ul>
+  <li>📊 <b>GPA Calculation</b> on a 5.0 scale</li>
+  <li>🗂️ <b>Transcript Generation</b> (semester-wise)</li>
+  <li>🎓 <b>Graduation Eligibility Audit</b> (based on GPA & credits)</li>
+  <li>📝 <b>Recommendation Letter Generation</b></li>
+  <li>📈 <b>GPA Trend Analysis</b> across semesters</li>
+  <li>🖥️ <b>CLI-only interface</b> (no GUI dependencies)</li>
+  <li>🔧 <b>Modular & Object-Oriented Architecture</b></li>
+  <li>📦 <b>Lightweight</b>: only requires Python + <code>rich</code></li>
+</ul>
 
-Recommendation letter generation
+<hr>
 
-GPA trend analysis over semesters
+<h2>📁 Project Structure</h2>
 
-CLI-only interface — no GUI dependencies
-
-Fully modular and object-oriented architecture
-
-Uses only Python Standard Library + rich for terminal formatting
-
-📁 Project Structure
-
+<pre>
 gradecalc/
-├── main.py # CLI entry point
-├── cli_menu.py # (if used) for CLI menu interactions
-├── config.py # Constants like grading scale
+├── main.py                 # CLI entry point
+├── cli_menu.py             # CLI menu interactions (optional)
+├── config.py               # Constants (grading scale, etc.)
 
-├── core/
-│ ├── gpa_calculator.py # GPA computation logic
-│ ├── transcript_generator.py # Transcript output logic
-│ ├── analytics.py # Semester-wise GPA trend chart
-│ ├── audit.py # Graduation eligibility checker
-│ ├── recommendation.py # Recommendation letter writer
-│ ├── student.py # Student object class
-│ └── course.py # Course object class
+├── core/                   # Core application logic
+│   ├── gpa_calculator.py   # GPA computation logic
+│   ├── transcript_generator.py # Transcript output logic
+│   ├── analytics.py        # GPA trend analysis
+│   ├── audit.py            # Graduation eligibility checker
+│   ├── recommendation.py   # Recommendation letter generator
+│   ├── student.py          # Student object class
+│   └── course.py           # Course object class
 
-├── utils/
-│ ├── file_io.py # File read/write helpers (optional)
-│ ├── input_validator.py # Input validation functions
-│ └── logger.py # Log handling (optional)
+├── utils/                  # Helper utilities
+│   ├── file_io.py          # File read/write helpers
+│   ├── input_validator.py  # Input validation functions
+│   └── logger.py           # Log handling (optional)
 
-├── data/
-│ ├── students.csv # Input data file
-│ └── transcripts/ # Output transcript files
+├── data/                   # Input & output data
+│   ├── students.csv        # Input student records
+│   └── transcripts/        # Generated transcripts
 
-├── templates/
-│ ├── recommendation_letter.txt # Saved recommendation output
-│ └── transcript_template.txt # Placeholder formatting (optional)
+├── templates/              # Text templates
+│   ├── recommendation_letter.txt
+│   └── transcript_template.txt
 
-├── tests/
-│ ├── test_gpa_calculator.py
-│ ├── test_audit.py
-│ └── test_transcript_generator.py
+├── tests/                  # Unit tests
+│   ├── test_gpa_calculator.py
+│   ├── test_audit.py
+│   └── test_transcript_generator.py
 
-├── docs/
-│ ├── README.md # Project overview (this file)
-│ ├── USER_GUIDE.md # CLI usage instructions
-│ ├── REQUIREMENTS.md # Functional and non-functional requirements
-│ └── TECHNICAL_DOC.md # Technical details and class documentation
+├── docs/                   # Documentation
+│   ├── README.md           # Project overview
+│   ├── USER_GUIDE.md       # CLI usage instructions
+│   ├── REQUIREMENTS.md     # Functional requirements
+│   └── TECHNICAL_DOC.md    # Technical documentation
 
-└── requirements.txt # Only contains rich
+└── requirements.txt        # Python dependencies (only `rich`)
+</pre>
 
-🖥️ Requirements
+<hr>
 
-Python 3.7+
+<h2>🖥️ Requirements</h2>
+<ul>
+  <li>Python 3.7+</li>
+  <li><a href="https://pypi.org/project/rich/">rich</a> (for styled CLI output)</li>
+</ul>
 
-rich (for styled CLI output)
+<p>Install <code>rich</code>:</p>
 
-Install rich:
+<pre><code>pip install rich</code></pre>
 
-pip install rich
+<hr>
 
-🔧 How to Use
+<h2>🚀 Usage</h2>
 
-Clone or download the repository.
+<ol>
+  <li><b>Clone the repository</b></li>
+</ol>
 
-Place your student data in data/students.csv.
+<pre><code>git clone https://github.com/your-username/gradecalc.git
+cd gradecalc
+</code></pre>
 
-Run the CLI from the terminal:
+<ol start="2">
+  <li><b>Prepare your student data</b></li>
+</ol>
 
-Basic usage:
+<p>Place your <code>students.csv</code> file inside <code>data/</code>.</p>
 
-python main.py --student-id 2023001111
+<ol start="3">
+  <li><b>Run the CLI</b></li>
+</ol>
 
-Generate transcript + recommendation letter:
+<pre><code>python main.py --student-id 2023001111</code></pre>
 
-python main.py --student-id 2023001111 --recommend
+<ol start="4">
+  <li><b>Generate transcript + recommendation letter</b></li>
+</ol>
 
-Optional: specify CSV path:
+<pre><code>python main.py --student-id 2023001111 --recommend</code></pre>
 
-python main.py --csv data/students.csv --student-id 2023001111
+<ol start="5">
+  <li><b>Optional: specify a custom CSV path</b></li>
+</ol>
 
-🧪 Running Tests
+<pre><code>python main.py --csv data/students.csv --student-id 2023001111</code></pre>
 
-Run all tests:
+<hr>
 
-python -m unittest discover
+<h2>🧪 Running Tests</h2>
 
-Run specific test module:
+<p>Run all tests:</p>
+<pre><code>python -m unittest discover</code></pre>
 
-python -m unittest tests.test_gpa_calculator
+<p>Run a specific test:</p>
+<pre><code>python -m unittest tests.test_gpa_calculator</code></pre>
 
-🗃️ Sample Data Format (students.csv)
+<hr>
 
-student_id,name,department,level,course,credit,grade,semester
+<h2>🗃️ Sample Data Format (<code>students.csv</code>)</h2>
+
+<pre><code>student_id,name,department,level,course,credit,grade,semester
 2023001111,Alice Smith,Computer Science,400,CSC202,3,A,Fall 2023
+</code></pre>
 
-✍️ Authors
+<hr>
 
-ADEG
+<h2>✍️ Author</h2>
+<p>👤 <b>ADEG</b></p>
 
-📜 License
+<hr>
 
-MIT License (or your preferred license)
+<h2>📜 License</h2>
+<p>This project is licensed under the <b>MIT License</b> (or your preferred license).</p>
 
-📎 Related Files
+<hr>
 
-templates/recommendation_letter.txt
-
-templates/transcript_template.txt
-
-data/students.csv
+<h2>📎 Related Files</h2>
+<ul>
+  <li>templates/recommendation_letter.txt</li>
+  <li>templates/transcript_template.txt</li>
+  <li>data/students.csv</li>
+</ul>
