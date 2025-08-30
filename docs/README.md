@@ -189,7 +189,7 @@ student_id,name,department,level,course,credit,grade,semester
     </td>
     <td align="center" width="50%">
       <a href="https://github.com/MAVIS-Creator">
-        <img src="https://github.com/Precious07-Ade.png?size=120" width="120" height="120" style="border-radius:50%;" alt="Precious07 Avatar"/><br/>
+        <img src="https://github.com/Precious07-Ade.png?size=120" width="120" height="120" style="border-radius:50%;" alt="MAVIS_Creator avatar"/><br/>
         <sub><b>MAVIS-Creator</b></sub>
       </a>
       <br/>
